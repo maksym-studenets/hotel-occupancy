@@ -131,6 +131,19 @@ class OccupancyServiceTest {
                                 .usageEconomy(2)
                                 .revenueEconomy(BigDecimal.valueOf(68))
                                 .build()
+                ),
+                Arguments.of(
+                        OccupancyRequestDto.builder()
+                                .premiumRooms(5)
+                                .economyRooms(7)
+                                .potentialGuests(List.of())
+                                .build(),
+                        OccupancyResponseDto.builder()
+                                .usagePremium(0)
+                                .revenuePremium(BigDecimal.valueOf(0))
+                                .usageEconomy(0)
+                                .revenueEconomy(BigDecimal.valueOf(0))
+                                .build()
                 )
         );
     }

@@ -153,16 +153,6 @@ public class OccupancySystemTest {
                                                              "premiumRooms": 7,
                                                              "economyRooms": 5,
                                                              "potentialGuests": [
-                                                             ]
-                                                         }
-                                                """
-                ),
-                Arguments.of(
-                        """
-                                                {
-                                                             "premiumRooms": 7,
-                                                             "economyRooms": 5,
-                                                             "potentialGuests": [
                                                                  23,
                                                                  45,
                                                                  155,

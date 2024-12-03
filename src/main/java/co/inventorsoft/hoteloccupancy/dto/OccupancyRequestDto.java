@@ -26,7 +26,7 @@ public class OccupancyRequestDto {
     @PositiveOrZero
     private Integer economyRooms;
 
-    @NotEmpty
+    @NotNull
     @GreaterThanZero
     private List<BigDecimal> potentialGuests;
 }
