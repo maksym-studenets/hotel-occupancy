@@ -1,5 +1,9 @@
 package co.inventorsoft.hoteloccupancy.dto;
 
+import co.inventorsoft.hoteloccupancy.validation.GreaterThanZero;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,9 +18,15 @@ import java.util.List;
 @AllArgsConstructor
 public class OccupancyRequestDto {
 
+    @NotNull
+    @PositiveOrZero
     private Integer premiumRooms;
 
+    @NotNull
+    @PositiveOrZero
     private Integer economyRooms;
 
+    @NotEmpty
+    @GreaterThanZero
     private List<BigDecimal> potentialGuests;
 }

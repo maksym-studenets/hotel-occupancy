@@ -4,6 +4,7 @@ package co.inventorsoft.hoteloccupancy.controller;
 import co.inventorsoft.hoteloccupancy.dto.OccupancyRequestDto;
 import co.inventorsoft.hoteloccupancy.dto.OccupancyResponseDto;
 import co.inventorsoft.hoteloccupancy.service.OccupancyService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +19,7 @@ public class OccupancyController {
     private final OccupancyService occupancyService;
 
     @PostMapping
-    public OccupancyResponseDto getOccupancy(@RequestBody OccupancyRequestDto requestDto) {
+    public OccupancyResponseDto getOccupancy(@RequestBody @Valid OccupancyRequestDto requestDto) {
         return occupancyService.getOccupancy(requestDto);
     }
 }
