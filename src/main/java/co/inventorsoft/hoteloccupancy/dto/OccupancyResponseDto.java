@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -12,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class OccupancyResponseDto {
 
     private int usagePremium;
-    private double revenuePremium;
+    private BigDecimal revenuePremium;
     private int usageEconomy;
-    private double revenueEconomy;
+    private BigDecimal revenueEconomy;
 }
